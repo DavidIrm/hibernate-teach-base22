@@ -59,6 +59,20 @@ public class  HibernateRunner {
         session.save(clasaNoua);
         System.out.println("============");
         System.out.println("dupa save "+clasaNoua);
+
+
+
+
+
+
+        Materii oMaterie = session.find(Materii.class,7);
+        System.out.println(oMaterie.toString());
+        Materii materieNoua = new Materii();
+        materieNoua.numeMaterie = "trascuArcul";
+        System.out.println(materieNoua);
+        session.save(materieNoua);
+        transaction.commit();
+
         transaction.commit();
 
 
